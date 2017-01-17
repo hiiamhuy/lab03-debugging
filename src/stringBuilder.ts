@@ -1,11 +1,11 @@
 class stringProcessor{
     private data: string;
     constructor(input: string){
-        input = data;
+        input = this.data;
     }
 
     public getString(): string{
-        return data;
+        return this.data;
     }
 
     public setString(data:string){
@@ -23,3 +23,11 @@ class stringProcessor{
         this.data = chars.join('');
     }
 }
+
+var x = new stringProcessor("hello");
+
+console.log(x.getString());
+x.setString("woot");
+console.log(x.getString());
+x.reverse();
+console.log(x.getString());
